@@ -5,7 +5,6 @@ data "aws_region" "default" {}
 # Define composite variables for resources
 module "label" {
   source     = "git::https://github.com/cloudposse/terraform-terraform-label.git?ref=tags/0.1.0"
-  namespace  = "${var.namespace}"
   name       = "${var.name}"
   stage      = "${var.stage}"
   delimiter  = "${var.delimiter}"
